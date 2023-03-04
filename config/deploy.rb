@@ -15,7 +15,7 @@ require 'mina_sidekiq/tasks'
 set :rails_env, 'production'
 
 set :application_name, 'heroku-sample'
-set :domain, 'heroku-sample.mzaidannas.me'
+set :domain, '3.14.231.212'
 set :deploy_to, '/home/ubuntu/heroku-sample'
 set :repository, 'https://github.com/mzaidannas/heroku-sample.git'
 set :branch, 'master'
@@ -23,6 +23,7 @@ set :branch, 'master'
 # Optional settings:
   set :user, 'ubuntu'          # Username in the server to SSH to.
   set :port, '22'              # SSH port number.
+  # set :ssh_options, ''
   set :forward_agent, true     # SSH forward_agent.
 
 
@@ -58,8 +59,8 @@ end
 task :remote_environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
-  invoke :'rbenv:load'
-  invoke :'nodenv:load'
+  invoke :'rbenv:load' # comment this line when first run because this will not load as it is not installed yet
+  invoke :'nodenv:load' # comment this line when first run because this will not load as it is not installed yet
 
   # For those using RVM, use this to load an RVM version@gemset.
   # invoke :'rvm:use', 'ruby-3.2.0@default'
