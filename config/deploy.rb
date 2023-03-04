@@ -17,7 +17,7 @@ set :rails_env, 'production'
 set :application_name, 'heroku-sample'
 set :domain, '3.14.231.212'
 set :deploy_to, '/home/ubuntu/heroku-sample'
-set :repository, 'https://github.com/mzaidannas/heroku-sample.git'
+set :repository, 'https://github.com/Muhammad-Ahmed96/heroku-sample.git'
 set :branch, 'master'
 
 # Optional settings:
